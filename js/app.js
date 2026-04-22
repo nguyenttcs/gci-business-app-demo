@@ -12,10 +12,22 @@ function showPanel(id) {
   if (panel) panel.classList.add('active');
 }
 
+function updateNavIcons(activeTab) {
+  navItems.forEach(btn => {
+    const tab = btn.dataset.tab;
+    const img = btn.querySelector('.nav-icon img');
+    if (!img) return;
+    img.src = tab === activeTab
+      ? `assets/icons/icon-${tab}-active.svg`
+      : `assets/icons/icon-${tab}.svg`;
+  });
+}
+
 function goToTab(tabName) {
   navItems.forEach(b => b.classList.remove('active'));
   const btn = document.querySelector(`.nav-item[data-tab="${tabName}"]`);
   if (btn) btn.classList.add('active');
+  updateNavIcons(tabName);
   showPanel(`tab-${tabName}`);
   pageTitle.textContent = TAB_TITLES[tabName] || tabName;
   backBtn.classList.add('hidden');

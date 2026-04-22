@@ -5,30 +5,49 @@
 .r-icon-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: var(--s2);
+  gap: 7px;
 }
 .r-icard {
-  background: #fff;
-  border-radius: var(--r-xl);
-  padding: 10px 4px 8px;
+  background: var(--white);
+  border-radius: var(--r-sm);
+  border: 0.5px solid rgba(255,255,255,0.8);
+  padding: 10px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
-  border: 0.5px solid var(--brand-10);
+  justify-content: center;
+  gap: 7px;
+  box-shadow: 0px 0.5px 1px rgba(0,0,0,0.08);
 }
-.r-iico {
-  width: 44px; height: 44px;
-  border-radius: var(--r-lg);
-  display: flex; align-items: center; justify-content: center;
+.r-iimg {
+  width: 40px; height: 40px;
+  display: block;
 }
-.r-iico svg { width: 22px; height: 22px; }
-.r-ico-green  { background: linear-gradient(135deg, #22C55E, #16A34A); }
-.r-ico-blue   { background: linear-gradient(135deg, #3B82F6, #2563EB); }
-.r-ico-dark   { background: linear-gradient(135deg, #4B5563, #374151); }
-.r-ico-purple { background: linear-gradient(135deg, var(--brand-30), var(--brand-primary)); }
-.r-iname { font-size: var(--t-xs); font-weight: 500; color: var(--brand-primary); text-align: center; }
-.r-iarr  { font-size: var(--t-xs); color: var(--brand-30); }
+.r-iimg-wrap {
+  position: relative;
+  width: 40px; height: 40px;
+  flex-shrink: 0;
+}
+.r-iimg-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  display: block;
+}
+.r-iimg-fg {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15.7px; height: 22.9px;
+  display: block;
+}
+.r-iname {
+  font-size: var(--t-xs);
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+  line-height: 1;
+}
 
 /* ── Period filter ── */
 .r-period {
