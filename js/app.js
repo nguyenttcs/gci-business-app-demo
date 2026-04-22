@@ -43,12 +43,27 @@ navItems.forEach(btn => {
 });
 
 // Sub-pages
+const SUBPAGE_TITLES = {
+  'ai-marketing': 'AI Marketing Report',
+  'go-pos':       'Go POS',
+  'go-checkin':   'Go Checkin',
+  'bamboo':       'Bamboo Dot',
+  'manage':       'GCI Ecosystem',
+};
+
+const COMING_SOON = new Set(['go-pos', 'go-checkin', 'bamboo', 'manage']);
+
 document.querySelectorAll('[data-subpage]').forEach(el => {
   el.addEventListener('click', () => {
     const subpage = el.dataset.subpage;
-    const titles  = { 'ai-marketing': 'AI Marketing Report' };
-    showPanel(`tab-${subpage}`);
-    pageTitle.textContent = titles[subpage] || subpage;
+    const title = SUBPAGE_TITLES[subpage] || subpage;
+    if (COMING_SOON.has(subpage)) {
+      document.getElementById('cs-app-name').textContent = title;
+      showPanel('tab-coming-soon');
+    } else {
+      showPanel(`tab-${subpage}`);
+    }
+    pageTitle.textContent = title;
     backBtn.classList.remove('hidden');
   });
 });
