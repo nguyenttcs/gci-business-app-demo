@@ -1,0 +1,72 @@
+:root {
+  /* ── Brand ── */
+  --brand-primary:   #5f2eea;
+  --brand-blue:      #1c6bea;
+  --brand-10:        #e3dffc;
+  --brand-30:        #9782f2;
+
+  /* ── Neutrals ── */
+  --bg:              #f2f2f6;
+  --white:           #fefefe;
+  --dark:            #2f2c35;
+  --text-primary:    #3d3d3d;
+  --text-secondary:  rgba(61, 61, 61, 0.70);
+  --text-field:      #828086;
+  --text-muted:      #444149;
+  --text-placeholder:#737373;
+
+  /* ── Status ── */
+  --success:         #26aa68;
+  --success-bg:      rgba(38, 170, 104, 0.10);
+  --blue-bg:         rgba(28, 107, 234, 0.10);
+
+  /* ── Card tints (gradient endpoint) ── */
+  --tint-green:      #d9ffd2;
+  --tint-green-2:    #d4ffc9;
+  --tint-blue:       #d2e7ff;
+  --tint-yellow:     #fff4d2;
+  --tint-yellow-2:   #fff2c4;
+  --tint-purple:     #ecd2ff;
+  --tint-teal:       #d9ffec;
+  --tint-pink:       #f97ba6;
+  --tint-sky:        #d9ecfb;
+
+  /* ── Misc ── */
+  --teal:            #54e4bd;
+  --slider-track:    rgba(207, 207, 207, 0.50);
+
+  /* ── Spacing ── */
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 20px;
+  --s6: 24px;
+
+  /* ── Radius ── */
+  --r-sm:   6px;
+  --r-md:   8px;
+  --r-lg:   12px;
+  --r-xl:   16px;
+  --r-2xl:  20px;
+  --r-full: 100px;
+
+  /* ── Shadows ── */
+  --shadow-card: 0px 2px 16px 0px rgba(0, 0, 0, 0.10);
+  --shadow-chip: 0px 0px 12px 0px rgba(0, 0, 0, 0.11);
+
+  /* ── Typography ── */
+  --font:    'Inter', sans-serif;
+  --t-xs:    10px;
+  --t-s:     12px;
+  --t-m:     14px;
+  --t-base:  16px;
+  --t-lg:    18px;
+  --t-xl:    20px;
+  --t-2xl:   24px;
+
+  /* ── Layout ── */
+  --header-h:  104px;
+  --nav-h:      56px;
+  --indicator-h:34px;
+}

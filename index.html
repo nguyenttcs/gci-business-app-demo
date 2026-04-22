@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GCI Business</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+<div class="phone">
+
+  <!-- ══════════════════════════════════════════
+       FIXED HEADER (purple gradient)
+  ══════════════════════════════════════════ -->
+  <header class="app-header">
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+      <span class="time">9:41</span>
+      <div class="status-icons">
+        <!-- Signal -->
+        <svg width="17" height="12" viewBox="0 0 17 12" fill="none">
+          <rect x="0" y="6" width="3" height="6" rx="1" fill="white"/>
+          <rect x="4.5" y="4" width="3" height="8" rx="1" fill="white"/>
+          <rect x="9" y="2" width="3" height="10" rx="1" fill="white"/>
+          <rect x="13.5" y="0" width="3" height="12" rx="1" fill="white"/>
+        </svg>
+        <!-- WiFi -->
+        <svg width="15" height="11" viewBox="0 0 15 11" fill="none">
+          <path d="M7.5 8.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3z" fill="white"/>
+          <path d="M2.5 5.5C4 3.9 5.65 3 7.5 3s3.5.9 5 2.5" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+          <path d="M0 2.8C2.1.8 4.65 0 7.5 0s5.4.8 7.5 2.8" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        </svg>
+        <!-- Battery -->
+        <svg width="25" height="12" viewBox="0 0 25 12" fill="none">
+          <rect x="0.5" y="0.5" width="21" height="11" rx="2.5" stroke="white" stroke-opacity="0.35"/>
+          <rect x="2" y="2" width="17" height="8" rx="1.5" fill="white"/>
+          <path d="M23 4v4a2 2 0 000-4z" fill="white" fill-opacity="0.4"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Page Header -->
+    <div class="page-header">
+      <button class="icon-btn" aria-label="Back">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M12.5 16L6.5 10L12.5 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <h1 class="page-title">AI Marketing Report</h1>
+      <div class="icon-btn hidden" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M12.5 16L6.5 10L12.5 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════
+       SCROLLABLE CONTENT
+  ══════════════════════════════════════════ -->
+  <div class="scroll-area">
+
+    <!-- ── TAB: REPORT (active) ── -->
+    <div class="tab-panel active" id="tab-report">
+      <div class="sections">
+
+        <!-- ────────────────────────────────────
+             1. INCOME TODAY CARD GROUP
+        ──────────────────────────────────── -->
+        <div class="card-group-purple">
+
+          <!-- White income card -->
+          <div class="income-card">
+
+            <!-- Income header: label + badge -->
+            <div class="income-header-row">
+              <span class="income-label">Income today</span>
+              <div class="badge-up">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                  <path d="M5 8V2M5 2L2 5M5 2L8 5" stroke="#26aa68" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>0.52%</span>
+              </div>
+            </div>
+
+            <!-- Amount + mini chart -->
+            <div class="income-amount-row">
+              <span class="income-amount">$18.2K</span>
+              <svg class="chart-icon" viewBox="0 0 24 24" fill="none">
+                <polyline points="2,18 7,11 12,14 17,7 22,9" stroke="#5f2eea" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <path d="M2,18 7,11 12,14 17,7 22,9 22,22 2,22 Z" fill="#5f2eea" opacity="0.12"/>
+              </svg>
+            </div>
+
+            <!-- Date filter chips -->
+            <div class="chips-scroll">
+              <!-- Calendar icon chip -->
+              <button class="chip chip-icon" aria-label="Pick date">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <rect x="1.5" y="2.5" width="15" height="14" rx="2" stroke="#3d3d3d" stroke-width="1.4"/>
+                  <path d="M1.5 7h15" stroke="#3d3d3d" stroke-width="1.4"/>
+                  <path d="M5.5 1v3M12.5 1v3" stroke="#3d3d3d" stroke-width="1.4" stroke-linecap="round"/>
+                  <rect x="4" y="9.5" width="2.5" height="2.5" rx="0.5" fill="#3d3d3d" opacity="0.6"/>
+                  <rect x="7.75" y="9.5" width="2.5" height="2.5" rx="0.5" fill="#3d3d3d" opacity="0.6"/>
+                  <rect x="11.5" y="9.5" width="2.5" height="2.5" rx="0.5" fill="#3d3d3d" opacity="0.6"/>
+                </svg>
+              </button>
+              <button class="chip chip-active">Today</button>
+              <button class="chip">7D</button>
+              <button class="chip">30D</button>
+              <button class="chip">90D</button>
+              <button class="chip">Dec</button>
+              <button class="chip">2025</button>
+            </div>
+
+          </div><!-- /income-card -->
+
+          <!-- Progress to Goal (in purple area) -->
+          <div class="progress-section">
+            <div class="progress-top-row">
+              <span class="progress-label">Progress to Goal</span>
+              <div class="goal-action">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <rect x="1.5" y="2" width="13" height="12" rx="1.5" stroke="#fefefe" stroke-width="1.3"/>
+                  <path d="M1.5 5.5h13" stroke="#fefefe" stroke-width="1.3"/>
+                  <path d="M5 1v2.5M11 1v2.5" stroke="#fefefe" stroke-width="1.3" stroke-linecap="round"/>
+                </svg>
+                <span>Set Goal</span>
+              </div>
+            </div>
+            <div class="progress-pct">75%</div>
+            <div class="progress-bar-wrap">
+              <div class="progress-track"></div>
+              <div class="progress-fill teal" style="width: 75%"></div>
+            </div>
+          </div>
+
+        </div><!-- /card-group-purple -->
+
+
+        <!-- ────────────────────────────────────
+             2. CAMPAIGN ACTIVITY
+        ──────────────────────────────────── -->
+        <div class="section-card section-brand">
+
+          <h2 class="section-title">Campaign Activity</h2>
+
+          <!-- 3 stat cards -->
+          <div class="stats-row">
+
+            <div class="stat-card tint-green">
+              <svg class="icon" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="#26aa68" stroke-width="1.5"/>
+                <path d="M8 12l3 3 5-5" stroke="#26aa68" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div class="stat-card-info">
+                <span class="stat-card-label">Active</span>
+                <span class="stat-card-value">3</span>
+              </div>
+            </div>
+
+            <div class="stat-card tint-blue">
+              <svg class="icon" viewBox="0 0 24 24" fill="none">
+                <path d="M9 12l2 2 4-4" stroke="#1c6bea" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#1c6bea" stroke-width="1.5"/>
+              </svg>
+              <div class="stat-card-info">
+                <span class="stat-card-label">Completed</span>
+                <span class="stat-card-value">12</span>
+              </div>
+            </div>
+
+            <div class="stat-card tint-yellow">
+              <svg class="icon" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="#f0a500" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="#f0a500" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+              <div class="stat-card-info">
+                <span class="stat-card-label">Draft</span>
+                <span class="stat-card-value">1</span>
+              </div>
+            </div>
+
+          </div><!-- /stats-row -->
+
+          <!-- Top Campaign title -->
+          <h3 class="section-title" style="font-size: 18px;">Top Campaign</h3>
+
+          <!-- ── Campaign Card 1 ── -->
+          <div class="campaign-card">
+
+            <div class="campaign-title-row">
+              <span class="campaign-name">Black Friday Flash</span>
+              <svg class="chevron-icon" viewBox="0 0 20 20" fill="none">
+                <path d="M7.5 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <div class="campaign-meta-row">
+              <div class="badge-promo">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M2 5h9l4 5-4 5H2V5z" stroke="#1c6bea" stroke-width="1.4" stroke-linejoin="round"/>
+                  <circle cx="5.5" cy="10" r="1" fill="#1c6bea"/>
+                </svg>
+                <span>Promotion</span>
+              </div>
+              <div class="campaign-status-group">
+                <div class="status-label-row">
+                  <svg class="status-dot" viewBox="0 0 16 16" fill="none">
+                    <circle cx="8" cy="8" r="5" fill="#26aa68" opacity="0.25"/>
+                    <circle cx="8" cy="8" r="3" fill="#26aa68"/>
+                  </svg>
+                  <span class="status-text">Active</span>
+                </div>
+                <div class="toggle">
+                  <div class="toggle-knob"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="campaign-dates">
+              <span>Start 20/01/2025</span>
+              <span>End 20/02/2025</span>
+            </div>
+            <div class="progress-bar-wrap">
+              <div class="progress-track"></div>
+              <div class="progress-fill green" style="width: 79.57%"></div>
+            </div>
+
+            <div class="campaign-stats">
+              <div class="stat-mini">
+                <span class="stat-mini-label">Income</span>
+                <span class="stat-mini-value">$98.4K</span>
+              </div>
+              <div class="stat-mini">
+                <span class="stat-mini-label">Conv. Rate</span>
+                <span class="stat-mini-value">80%</span>
+              </div>
+            </div>
+
+          </div><!-- /campaign-card 1 -->
+
+          <!-- ── Campaign Card 2 ── -->
+          <div class="campaign-card">
+
+            <div class="campaign-title-row">
+              <span class="campaign-name">New Year New You</span>
+              <svg class="chevron-icon" viewBox="0 0 20 20" fill="none">
+                <path d="M7.5 5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <div class="campaign-meta-row">
+              <div class="badge-promo">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M2 5h9l4 5-4 5H2V5z" stroke="#1c6bea" stroke-width="1.4" stroke-linejoin="round"/>
+                  <circle cx="5.5" cy="10" r="1" fill="#1c6bea"/>
+                </svg>
+                <span>Promotion</span>
+              </div>
+              <div class="campaign-status-group">
+                <div class="status-label-row">
+                  <svg class="status-dot" viewBox="0 0 16 16" fill="none">
+                    <circle cx="8" cy="8" r="5" fill="#26aa68" opacity="0.25"/>
+                    <circle cx="8" cy="8" r="3" fill="#26aa68"/>
+                  </svg>
+                  <span class="status-text">Active</span>
+                </div>
+                <div class="toggle">
+                  <div class="toggle-knob"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="campaign-dates">
+              <span>Start 20/01/2025</span>
+              <span>End 20/02/2025</span>
+            </div>
+            <div class="progress-bar-wrap">
+              <div class="progress-track"></div>
+              <div class="progress-fill green" style="width: 62%"></div>
+            </div>
+
+            <div class="campaign-stats">
+              <div class="stat-mini">
+                <span class="stat-mini-label">Income</span>
+                <span class="stat-mini-value">$74.1K</span>
+              </div>
+              <div class="stat-mini">
+                <span class="stat-mini-label">Conv. Rate</span>
+                <span class="stat-mini-value">65%</span>
+              </div>
+            </div>
+
+          </div><!-- /campaign-card 2 -->
+
+          <!-- View More -->
+          <div class="view-more-btn">
+            <span>View More</span>
+          </div>
+
+        </div><!-- /section-brand (Campaign Activity) -->
+
+
+        <!-- ────────────────────────────────────
+             3. PERFORMANCE VS PREVIOUS PERIOD
+        ──────────────────────────────────── -->
+        <div class="section-card section-white">
+
+          <div>
+            <h2 class="section-title">Performance vs Previous Period</h2>
+            <p class="section-subtitle" style="margin-top:4px;">01/20/2026 vs 01/19/2026</p>
+          </div>
+
+          <!-- Date tabs -->
+          <div class="tab-chips">
+            <button class="chip chip-active">Yesterday</button>
+            <button class="chip">7D</button>
+            <button class="chip">30D</button>
+            <button class="chip">90D</button>
+          </div>
+
+          <!-- Metrics grid -->
+          <div class="metrics-grid">
+            <div class="metrics-row">
+              <div class="metric-card tint-green">
+                <span class="metric-label">Income</span>
+                <div class="metric-amount-row">
+                  <span class="metric-value">$54.2K</span>
+                  <svg class="metric-trend" viewBox="0 0 24 24" fill="none">
+                    <path d="M3 17l5-6 4 3 5-7 4 3" stroke="#26aa68" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <span class="metric-compare">vs $125.3K</span>
+              </div>
+              <div class="metric-card tint-purple">
+                <span class="metric-label">Return Customer</span>
+                <div class="metric-amount-row">
+                  <span class="metric-value">68%</span>
+                  <svg class="metric-trend" viewBox="0 0 24 24" fill="none">
+                    <path d="M3 17l5-6 4 3 5-7 4 3" stroke="#9782f2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <span class="metric-compare">vs 72%</span>
+              </div>
+            </div>
+            <div class="metrics-row">
+              <div class="metric-card tint-blue">
+                <span class="metric-label">New Customers</span>
+                <div class="metric-amount-row">
+                  <span class="metric-value">1,240</span>
+                  <svg class="metric-trend" viewBox="0 0 24 24" fill="none">
+                    <path d="M3 17l5-6 4 3 5-7 4 3" stroke="#1c6bea" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <span class="metric-compare">vs 980</span>
+              </div>
+              <div class="metric-card tint-yellow">
+                <span class="metric-label">Avg. Order</span>
+                <div class="metric-amount-row">
+                  <span class="metric-value">$43.7</span>
+                  <svg class="metric-trend" viewBox="0 0 24 24" fill="none">
+                    <path d="M3 10l5 4 4-3 5 5 4-2" stroke="#f0a500" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <span class="metric-compare">vs $15 pts</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /Performance vs Previous Period -->
+
+
+        <!-- ────────────────────────────────────
+             4. PERFORMANCE TRENDS
+        ──────────────────────────────────── -->
+        <div class="section-card section-white" style="padding: 24px; gap: 16px;">
+
+          <div class="section-header-row">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M3 18l4-8 4 4 4-6 4 4" stroke="#444149" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M3 22h18" stroke="#444149" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <h2 class="section-title">Performance Trends</h2>
+          </div>
+
+          <!-- Date tabs -->
+          <div class="tab-chips">
+            <button class="chip chip-active">Yesterday</button>
+            <button class="chip">7D</button>
+            <button class="chip">30D</button>
+            <button class="chip">90D</button>
+          </div>
+
+          <!-- Trend Line Chart (SVG) -->
+          <div class="trend-chart-wrap">
+            <svg viewBox="0 0 311 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:120px;">
+              <defs>
+                <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#5f2eea" stop-opacity="0.20"/>
+                  <stop offset="100%" stop-color="#5f2eea" stop-opacity="0.00"/>
+                </linearGradient>
+                <linearGradient id="areaGrad2" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#26aa68" stop-opacity="0.18"/>
+                  <stop offset="100%" stop-color="#26aa68" stop-opacity="0.00"/>
+                </linearGradient>
+              </defs>
+              <!-- Y grid lines -->
+              <line x1="0" y1="30"  x2="311" y2="30"  stroke="#f0f0f0" stroke-width="1"/>
+              <line x1="0" y1="60"  x2="311" y2="60"  stroke="#f0f0f0" stroke-width="1"/>
+              <line x1="0" y1="90"  x2="311" y2="90"  stroke="#f0f0f0" stroke-width="1"/>
+              <!-- Area 1 (brand purple) -->
+              <path d="M0,95 C25,88 45,75 75,62 C105,49 120,66 150,54 C180,42 200,28 235,18 C260,11 285,22 311,14 L311,120 L0,120 Z"
+                    fill="url(#areaGrad)"/>
+              <!-- Area 2 (success green) -->
+              <path d="M0,105 C30,100 55,90 80,80 C110,68 130,78 160,72 C190,66 215,55 245,48 C270,43 290,52 311,46 L311,120 L0,120 Z"
+                    fill="url(#areaGrad2)"/>
+              <!-- Line 1 (brand) -->
+              <path d="M0,95 C25,88 45,75 75,62 C105,49 120,66 150,54 C180,42 200,28 235,18 C260,11 285,22 311,14"
+                    fill="none" stroke="#5f2eea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- Line 2 (green) -->
+              <path d="M0,105 C30,100 55,90 80,80 C110,68 130,78 160,72 C190,66 215,55 245,48 C270,43 290,52 311,46"
+                    fill="none" stroke="#26aa68" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- Dot on line 1 peak -->
+              <circle cx="235" cy="18" r="4" fill="#5f2eea"/>
+              <circle cx="235" cy="18" r="7" fill="#5f2eea" opacity="0.2"/>
+            </svg>
+          </div>
+
+          <!-- Channel Performance -->
+          <div class="channel-list">
+
+            <div class="channel-item">
+              <div class="channel-item-header">
+                <span class="channel-name">Facebook Ads</span>
+                <span class="channel-score" style="color: var(--success);">92 pts</span>
+              </div>
+              <div class="channel-bar-wrap">
+                <div class="channel-bar-fill" style="width:92%; background: var(--brand-primary);"></div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="channel-item">
+              <div class="channel-item-header">
+                <span class="channel-name">Instagram</span>
+                <span class="channel-score" style="color: var(--brand-blue);">78 pts</span>
+              </div>
+              <div class="channel-bar-wrap">
+                <div class="channel-bar-fill" style="width:78%; background: var(--brand-blue);"></div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="channel-item">
+              <div class="channel-item-header">
+                <span class="channel-name">Email Campaign</span>
+                <span class="channel-score" style="color: var(--success);">85 pts</span>
+              </div>
+              <div class="channel-bar-wrap">
+                <div class="channel-bar-fill" style="width:85%; background: var(--teal);"></div>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="channel-item">
+              <div class="channel-item-header">
+                <span class="channel-name">Google Ads</span>
+                <span class="channel-score" style="color: var(--text-field);">63 pts</span>
+              </div>
+              <div class="channel-bar-wrap">
+                <div class="channel-bar-fill" style="width:63%; background: var(--brand-30);"></div>
+              </div>
+            </div>
+
+          </div><!-- /channel-list -->
+
+        </div><!-- /Performance Trends -->
+
+      </div><!-- /sections -->
+    </div><!-- #tab-report -->
+
+
+    <!-- ── Other Tabs (empty placeholders) ── -->
+    <div class="tab-panel" id="tab-home">
+      <div class="empty-tab">
+        <svg viewBox="0 0 48 48" fill="none">
+          <path d="M6 20L24 6l18 14v22a2 2 0 01-2 2H8a2 2 0 01-2-2V20z" stroke="currentColor" stroke-width="2"/>
+          <path d="M18 44V28h12v16" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+        <p>Home — Coming Soon</p>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab-campaigns">
+      <div class="empty-tab">
+        <svg viewBox="0 0 48 48" fill="none">
+          <path d="M8 14h4l12-8 12 8h4v24H8V14z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <circle cx="24" cy="22" r="4" stroke="currentColor" stroke-width="2"/>
+          <path d="M16 38v-4a8 8 0 0116 0v4" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <p>Campaigns — Coming Soon</p>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab-insights">
+      <div class="empty-tab">
+        <svg viewBox="0 0 48 48" fill="none">
+          <rect x="4" y="28" width="8" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+          <rect x="16" y="18" width="8" height="26" rx="2" stroke="currentColor" stroke-width="2"/>
+          <rect x="28" y="10" width="8" height="34" rx="2" stroke="currentColor" stroke-width="2"/>
+          <rect x="40" y="4" width="4" height="40" rx="2" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <p>Insights — Coming Soon</p>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab-settings">
+      <div class="empty-tab">
+        <svg viewBox="0 0 48 48" fill="none">
+          <circle cx="24" cy="24" r="6" stroke="currentColor" stroke-width="2"/>
+          <path d="M24 4v4M24 40v4M4 24h4M40 24h4M8.7 8.7l2.8 2.8M36.5 36.5l2.8 2.8M8.7 39.3l2.8-2.8M36.5 11.5l2.8-2.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <p>Settings — Coming Soon</p>
+      </div>
+    </div>
+
+  </div><!-- /.scroll-area -->
+
+
+  <!-- ══════════════════════════════════════════
+       BOTTOM NAVIGATION
+  ══════════════════════════════════════════ -->
+  <nav class="bottom-nav" aria-label="Main navigation">
+
+    <button class="nav-item" data-tab="home" aria-label="Home">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M3 10.5L12 3l9 7.5V21a1 1 0 01-1 1H5a1 1 0 01-1-1V10.5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M9 22V14h6v8" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      </svg>
+      <span>Home</span>
+    </button>
+
+    <button class="nav-item" data-tab="campaigns" aria-label="Campaigns">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M3 7h2l7-4 7 4h2v12H3V7z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        <circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+      <span>Campaigns</span>
+    </button>
+
+    <button class="nav-item active" data-tab="report" aria-label="Report">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M3 20l4-8 4 4 4-7 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M3 22h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <span>Report</span>
+    </button>
+
+    <button class="nav-item" data-tab="insights" aria-label="Insights">
+      <svg viewBox="0 0 24 24" fill="none">
+        <rect x="2" y="14" width="4" height="8" rx="1" stroke="currentColor" stroke-width="1.8"/>
+        <rect x="8" y="9" width="4" height="13" rx="1" stroke="currentColor" stroke-width="1.8"/>
+        <rect x="14" y="5" width="4" height="17" rx="1" stroke="currentColor" stroke-width="1.8"/>
+        <rect x="20" y="2" width="2" height="20" rx="1" stroke="currentColor" stroke-width="1.8"/>
+      </svg>
+      <span>Insights</span>
+    </button>
+
+    <button class="nav-item" data-tab="settings" aria-label="Settings">
+      <svg viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.8"/>
+        <path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <span>Settings</span>
+    </button>
+
+  </nav>
+
+  <!-- ══════════════════════════════════════════
+       HOME INDICATOR (iOS)
+  ══════════════════════════════════════════ -->
+  <div class="home-indicator" aria-hidden="true">
+    <div class="indicator-line"></div>
+  </div>
+
+</div><!-- /.phone -->
+
+<script src="js/app.js"></script>
+</body>
+</html>
