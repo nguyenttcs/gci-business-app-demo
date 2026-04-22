@@ -94,6 +94,9 @@
 .r-ahs-lbl   { font-size: var(--t-xs); color: rgba(255,255,255,0.45); margin-bottom: 3px; }
 .r-ahs-val   { font-size: var(--t-m); font-weight: 600; color: #fff; }
 .r-ahs-val.up{ color: var(--teal); }
+.r-ahs-row   { display: flex; align-items: baseline; gap: 5px; }
+.r-ahs-delta { font-size: var(--t-xs); font-weight: 600; color: var(--teal); }
+.r-ahs-sub   { font-size: var(--t-xs); color: rgba(255,255,255,0.38); margin-top: 2px; }
 
 /* ── Section cards ── */
 .r-sec {
