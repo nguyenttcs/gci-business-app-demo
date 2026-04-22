@@ -1,15 +1,47 @@
 const navItems  = document.querySelectorAll('.nav-item');
 const tabPanels = document.querySelectorAll('.tab-panel');
+const pageTitle = document.getElementById('page-title');
+const backBtn   = document.getElementById('back-btn');
+
+const TAB_TITLES = { home: 'Home', booking: 'Booking', message: 'Message', report: 'Report' };
+let activeMainTab = 'home';
+
+function showPanel(id) {
+  tabPanels.forEach(p => p.classList.remove('active'));
+  const panel = document.getElementById(id);
+  if (panel) panel.classList.add('active');
+}
+
+function goToTab(tabName) {
+  navItems.forEach(b => b.classList.remove('active'));
+  const btn = document.querySelector(`.nav-item[data-tab="${tabName}"]`);
+  if (btn) btn.classList.add('active');
+  showPanel(`tab-${tabName}`);
+  pageTitle.textContent = TAB_TITLES[tabName] || tabName;
+  backBtn.classList.add('hidden');
+  activeMainTab = tabName;
+}
 
 navItems.forEach(btn => {
   btn.addEventListener('click', () => {
     const target = btn.dataset.tab;
-
-    navItems.forEach(b => b.classList.remove('active'));
-    tabPanels.forEach(p => p.classList.remove('active'));
-
-    btn.classList.add('active');
-    const panel = document.getElementById(`tab-${target}`);
-    if (panel) panel.classList.add('active');
+    if (!document.getElementById(`tab-${target}`)) return;
+    goToTab(target);
   });
+});
+
+// Sub-pages
+document.querySelectorAll('[data-subpage]').forEach(el => {
+  el.addEventListener('click', () => {
+    const subpage = el.dataset.subpage;
+    const titles  = { 'ai-marketing': 'AI Marketing Report' };
+    showPanel(`tab-${subpage}`);
+    pageTitle.textContent = titles[subpage] || subpage;
+    backBtn.classList.remove('hidden');
+  });
+});
+
+// Back button → return to last main tab
+backBtn.addEventListener('click', () => {
+  goToTab(activeMainTab);
 });

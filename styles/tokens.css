@@ -66,7 +66,10 @@
   --t-2xl:   24px;
 
   /* ── Layout ── */
-  --header-h:  104px;
-  --nav-h:      56px;
-  --indicator-h:34px;
+  --header-h:    104px;
+  --nav-h:        68px;   /* nav bar height */
+  --indicator-h:  34px;
+  --qs-overflow:  16px;   /* Quick Sale circle extends above nav bar */
+  --color-danger: #e24533;
+  --color-qs:     #13bc8e;
 }

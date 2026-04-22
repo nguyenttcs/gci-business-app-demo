@@ -108,7 +108,7 @@ img { display: block; max-width: 100%; }
   top: var(--header-h);
   left: 0;
   right: 0;
-  bottom: calc(var(--nav-h) + var(--indicator-h));
+  bottom: calc(var(--nav-h) + var(--indicator-h) + var(--qs-overflow));
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -641,34 +641,124 @@ img { display: block; max-width: 100%; }
   bottom: var(--indicator-h);
   left: 0;
   right: 0;
-  height: var(--nav-h);
-  background: rgba(255,255,255,0.96);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-top: 1px solid rgba(0,0,0,0.08);
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 0 8px;
+  overflow: visible;
   z-index: 100;
 }
+
+/* The white bar */
+.nav-bar {
+  background: #fff;
+  border-top: 1px solid #eaeaeb;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 0;
+  position: relative;
+}
+
+/* Regular tab item */
 .nav-item {
-  flex: 1;
+  width: 60px;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 4px;
-  height: 100%;
-  color: var(--text-field);
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  color: #6d6b72;
   transition: color 0.15s;
 }
 .nav-item.active { color: var(--brand-primary); }
-.nav-item svg { width: 24px; height: 24px; display: block; }
-.nav-item span {
-  font-size: 10px;
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.nav-icon img { width: 20px; height: 20px; display: block; }
+.nav-icon svg { width: 20px; height: 20px; display: block; }
+
+.nav-label {
+  font-size: 11px;
+  font-weight: 600;
+  font-family: var(--font);
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+/* Empty center slot for Quick Sale */
+.nav-spacer {
+  width: 60px;
+  height: 44px;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+/* Notification badge */
+.nav-badge {
+  position: absolute;
+  top: -5px;
+  left: calc(50% + 2px);
+  min-width: 14px;
+  height: 14px;
+  background: var(--color-danger);
+  border: 2px solid #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3px;
+}
+.nav-badge span {
+  font-size: 9px;
   font-weight: 500;
+  color: #fff;
   line-height: 1;
+  white-space: nowrap;
+}
+
+/* ── Quick Sale floating button ── */
+.nav-qs {
+  position: absolute;
+  bottom: 12px;          /* align label bottom with other items */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+.nav-qs-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  background: var(--color-qs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(19, 188, 142, 0.35);
+}
+.nav-qs-circle svg { width: 24px; height: 24px; display: block; }
+.nav-qs-label {
+  font-size: 11px;
+  font-weight: 600;
+  font-family: var(--font);
+  line-height: 16px;
+  color: #6d6b72;
+  white-space: nowrap;
 }
 
 /* ═══════════════════════════════════════════
@@ -680,7 +770,7 @@ img { display: block; max-width: 100%; }
   left: 0;
   right: 0;
   height: var(--indicator-h);
-  background: var(--bg);
+  background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
