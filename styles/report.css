@@ -192,10 +192,11 @@
 .r-seo-num  { font-size: var(--t-m); font-weight: 700; color: var(--dark); min-width: 38px; text-align: right; }
 .r-seo-delta { font-size: var(--t-xs); font-weight: 600; min-width: 34px; text-align: right; }
 .r-seo-up   { color: var(--success); }
-.r-seo-rank { display: flex; align-items: center; gap: 9px; padding: 10px 13px; background: #f8f9ff; border-top: 0.5px solid #e8eaf6; }
-.r-seo-rank-badge { font-size: var(--t-lg); font-weight: 800; color: #4285F4; line-height: 1; flex-shrink: 0; }
-.r-seo-rank-kw   { flex: 1; font-size: var(--t-s); font-weight: 600; color: var(--dark); }
-.r-seo-rank-note { font-size: var(--t-xs); color: var(--text-field); }
+.r-seo-ai        { background: linear-gradient(135deg, #ede8fd 0%, #e6e0fc 100%); border-top: 0.5px solid var(--brand-30); padding: 11px 13px; display: flex; flex-direction: column; gap: 7px; }
+.r-seo-ai-lbl    { display: flex; align-items: center; gap: 5px; font-size: var(--t-xs); font-weight: 600; color: var(--brand-primary); letter-spacing: .04em; }
+.r-seo-ai-row    { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.r-seo-ai-act    { font-size: var(--t-s); color: var(--text-secondary); }
+.r-seo-ai-imp    { font-size: var(--t-s); font-weight: 600; color: var(--brand-primary); flex-shrink: 0; }
 
 /* ── Performance by Channel ── */
 .r-chan-list { display: flex; flex-direction: column; gap: 10px; }
