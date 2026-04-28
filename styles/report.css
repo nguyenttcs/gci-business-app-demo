@@ -179,6 +179,47 @@
 .r-sc-lbl   { font-size: var(--t-xs); color: var(--text-field); line-height: 1.3; }
 .r-sc-note  { font-size: var(--t-xs); font-weight: 600; margin-top: 6px; }
 
+/* ── SEO panel (analytics row style) ── */
+.r-seo-panel { background: var(--white); border-radius: var(--r-lg); overflow: hidden; border: 0.5px solid var(--brand-10); }
+.r-seo-ghead { display: flex; align-items: center; gap: 7px; padding: 10px 13px; background: #f8f9ff; border-bottom: 0.5px solid #e8eaf6; }
+.r-seo-ghead span:first-of-type { font-size: var(--t-s); font-weight: 600; color: var(--text-primary); flex: 1; }
+.r-seo-period { font-size: var(--t-xs); color: var(--text-field); }
+.r-seo-rows { padding: 4px 0; }
+.r-seo-row { display: flex; align-items: center; gap: 10px; padding: 9px 13px; border-bottom: 0.5px solid var(--bg); }
+.r-seo-row:last-child { border-bottom: none; }
+.r-seo-dot  { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.r-seo-lbl  { flex: 1; font-size: var(--t-s); color: var(--text-secondary); }
+.r-seo-num  { font-size: var(--t-m); font-weight: 700; color: var(--dark); min-width: 38px; text-align: right; }
+.r-seo-delta { font-size: var(--t-xs); font-weight: 600; min-width: 34px; text-align: right; }
+.r-seo-up   { color: var(--success); }
+.r-seo-rank { display: flex; align-items: center; gap: 9px; padding: 10px 13px; background: #f8f9ff; border-top: 0.5px solid #e8eaf6; }
+.r-seo-rank-badge { font-size: var(--t-lg); font-weight: 800; color: #4285F4; line-height: 1; flex-shrink: 0; }
+.r-seo-rank-kw   { flex: 1; font-size: var(--t-s); font-weight: 600; color: var(--dark); }
+.r-seo-rank-note { font-size: var(--t-xs); color: var(--text-field); }
+
+/* ── Performance by Channel ── */
+.r-chan-list { display: flex; flex-direction: column; gap: 10px; }
+.r-chan-card { border-radius: var(--r-lg); overflow: hidden; }
+.r-chan-head { display: flex; align-items: center; gap: 9px; padding: 11px 13px; }
+.r-chan-ico  { width: 28px; height: 28px; border-radius: var(--r-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.r-chan-ico svg { width: 16px; height: 16px; }
+.r-chan-name { font-size: var(--t-base); font-weight: 700; flex: 1; }
+.r-chan-rate { font-size: var(--t-xs); font-weight: 600; }
+.r-chan-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; background: var(--white); padding: 12px 13px 13px; }
+.r-chan-metric { display: flex; flex-direction: column; gap: 5px; }
+.r-chan-val  { font-size: var(--t-m); font-weight: 700; color: var(--dark); line-height: 1; }
+.r-chan-lbl  { font-size: var(--t-xs); color: var(--text-field); line-height: 1.3; }
+
+.r-chan-sms         { background: #EFF6FF; }
+.r-chan-ico-sms     { background: #DBEAFE; }
+.r-chan-name-sms    { color: #2563EB; }
+.r-chan-rate-sms    { color: #2563EB; }
+
+.r-chan-email       { background: #F0FDF4; }
+.r-chan-ico-email   { background: #D1FAE5; }
+.r-chan-name-email  { color: #059669; }
+.r-chan-rate-email  { color: #059669; }
+
 /* ── SEO keyword ranking strip ── */
 .r-seo-kw { background: var(--white); border-radius: var(--r-lg); padding: 12px 13px; margin-top: var(--s2); border: 0.5px solid var(--brand-10); }
 .r-seo-kw-lbl  { font-size: var(--t-xs); font-weight: 600; color: var(--brand-30); letter-spacing: .05em; margin-bottom: 9px; }
@@ -217,9 +258,9 @@
 /* ── Funnel chain ── */
 .r-chain {
   background: linear-gradient(135deg, #ede8fd 0%, #e6e0fc 100%);
-  border-radius: var(--r-lg);
+  /* border-radius: var(--r-lg); */
   padding: 13px 12px 12px;
-  border: 0.5px solid var(--brand-30);
+  /* border: 0.5px solid var(--brand-30); */
 }
 .r-chain-title {
   font-size: 11px; font-weight: 600;
