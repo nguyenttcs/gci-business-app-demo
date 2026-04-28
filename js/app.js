@@ -7,19 +7,6 @@ const TAB_TITLES = { home: 'Home', booking: 'Booking', message: 'Message', repor
 let activeMainTab = 'home';
 let isAnimating   = false;
 
-// ── Funnel bars: start at 0, animate to data-w on Report entry ──
-const funnelBars = document.querySelectorAll('.r-fstep-fill');
-funnelBars.forEach(el => { el.style.width = '0'; });
-
-function animateFunnelBars() {
-  funnelBars.forEach((el, i) => {
-    setTimeout(() => { el.style.width = el.dataset.w; }, i * 130);
-  });
-}
-
-function resetFunnelBars() {
-  funnelBars.forEach(el => { el.style.width = '0'; });
-}
 
 // ── Add animation class, remove after it finishes ──
 function animatePanel(panel, cls) {
@@ -57,10 +44,6 @@ function goToTab(tabName) {
   backBtn.classList.add('hidden');
   activeMainTab = tabName;
 
-  if (tabName === 'report') {
-    resetFunnelBars();
-    setTimeout(animateFunnelBars, 80);
-  }
 }
 
 // ── Period filter ──

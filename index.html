@@ -76,7 +76,8 @@
       </div>
     </div>
 
-    <!-- ── SUB-PAGE: AI Marketing Report ── -->
+    <!-- ── SUB-PAGE: AI Marketing Report (hidden, preserved for later) ── -->
+    <template id="tpl-ai-marketing">
     <div class="tab-panel" id="tab-ai-marketing">
       <div class="sections">
 
@@ -498,6 +499,7 @@
 
       </div><!-- /sections -->
     </div><!-- #tab-ai-marketing -->
+    </template>
 
     <!-- ── Booking (empty) ── -->
     <div class="tab-panel" id="tab-booking">
@@ -559,10 +561,6 @@
           <img class="r-iimg" src="https://www.figma.com/api/mcp/asset/e313ec1f-5fff-4f4c-8351-5886fabefbf0" alt="Bamboo" width="40" height="40">
           <span class="r-iname">Bamboo</span>
         </div>
-        <div class="r-icard" data-subpage="ai-marketing" style="cursor:pointer">
-          <img class="r-iimg" src="https://www.figma.com/api/mcp/asset/6327b37f-e219-4be2-a399-81e3bee5927c" alt="AI Marketing" width="40" height="40">
-          <span class="r-iname">AI Marketing</span>
-        </div>
       </div>
 
       <!-- Period filter -->
@@ -605,6 +603,39 @@
             <div class="r-ahs-val">4.9 ★</div>
             <div class="r-ahs-sub">Top #2 area</div>
           </div>
+        </div>
+      </div>
+
+      <!-- AI Content Performance -->
+      <div class="r-sec">
+        <div class="r-sh"><span class="r-st">AI Content Performance</span></div>
+        <div class="r-chain">
+          <div class="r-chain-title">
+            <svg width="9" height="9" viewBox="0 0 10 10" fill="none"><path d="M5 0L6.12 3.88L10 5L6.12 6.12L5 10L3.88 6.12L0 5L3.88 3.88Z" fill="var(--brand-primary)"/></svg>
+            46 AI posts this month generated:
+          </div>
+          <div class="r-chain-row">
+            <div class="r-cstep">
+              <div class="r-cstep-num">21.4K</div>
+              <div class="r-cstep-lbl">total views</div>
+            </div>
+            <div class="r-chain-arr">›</div>
+            <div class="r-cstep">
+              <div class="r-cstep-num">8,600</div>
+              <div class="r-cstep-lbl">unique reached</div>
+            </div>
+            <div class="r-chain-arr">›</div>
+            <div class="r-cstep">
+              <div class="r-cstep-num">1,820</div>
+              <div class="r-cstep-lbl">booking clicks</div>
+            </div>
+            <div class="r-chain-arr">›</div>
+            <div class="r-cstep r-cstep-accent">
+              <div class="r-cstep-num">284</div>
+              <div class="r-cstep-lbl">clients visited</div>
+            </div>
+          </div>
+          <div class="r-chain-note">1,820 clicks → 284 clients = <strong>15.6% booking rate</strong></div>
         </div>
       </div>
 
@@ -683,9 +714,9 @@
         </div>
       </div>
 
-      <!-- Social & AI Marketing -->
+      <!-- AI Social & SEO -->
       <div class="r-sec">
-        <div class="r-sh"><span class="r-st">Social &amp; AI Marketing</span><span class="r-sl" data-subpage="ai-marketing" style="cursor:pointer">AI Marketing ›</span></div>
+        <div class="r-sh"><span class="r-st">AI Social &amp; SEO</span></div>
         <div class="r-sb">
           <div class="r-sublbl">SOCIAL REACH</div>
           <div class="r-social-grid">
@@ -766,123 +797,98 @@
             </div>
           </div>
           <div class="r-divl"></div>
-          <div class="r-sublbl">AI CONTENT PERFORMANCE</div>
-          <div class="r-chain">
-            <div class="r-chain-title">
-              <svg width="9" height="9" viewBox="0 0 10 10" fill="none"><path d="M5 0L6.12 3.88L10 5L6.12 6.12L5 10L3.88 6.12L0 5L3.88 3.88Z" fill="var(--brand-primary)"/></svg>
-              46 AI posts this month generated:
+          <div class="r-sublbl">SEO &amp; LOCAL SEARCH</div>
+          <div class="r-social-grid">
+            <div class="r-sc" style="background:#F0FDF4">
+              <div class="r-sc-top">
+                <div class="r-sc-ico" style="background:#D1FAE5"><svg viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="#059669" stroke-width="1.1"/><path d="M4.5 7L6.2 8.8L9.5 5.5" stroke="#059669" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <span class="r-sc-badge" style="background:#D1FAE5;color:#065F46">+12%</span>
+              </div>
+              <div class="r-sc-val">3,240</div>
+              <div class="r-sc-lbl">Google Profile views</div>
+              <div class="r-sc-note" style="color:#059669">Search &amp; Maps</div>
             </div>
-            <div class="r-funnel">
-
-              <div class="r-fstep">
-                <div class="r-fstep-head">
-                  <span class="r-fstep-lbl">Total Views</span>
-                  <span class="r-fstep-right"><span class="r-fstep-num">21.4K</span><span class="r-fstep-pct">100%</span></span>
-                </div>
-                <div class="r-fstep-track"><div class="r-fstep-fill" data-w="100%"></div></div>
+            <div class="r-sc" style="background:#EFF6FF">
+              <div class="r-sc-top">
+                <div class="r-sc-ico" style="background:#DBEAFE"><svg viewBox="0 0 14 14" fill="none"><path d="M7 1.5C4.5 1.5 2.5 3.5 2.5 6c0 3.5 4.5 6.5 4.5 6.5s4.5-3 4.5-6.5c0-2.5-2-4.5-4.5-4.5z" stroke="#2563EB" stroke-width="1.1"/><circle cx="7" cy="6" r="1.5" fill="#2563EB"/></svg></div>
+                <span class="r-sc-badge" style="background:#DBEAFE;color:#1D4ED8">+15%</span>
               </div>
-
-              <div class="r-funnel-gap"></div>
-
-              <div class="r-fstep">
-                <div class="r-fstep-head">
-                  <span class="r-fstep-lbl">Unique Reached</span>
-                  <span class="r-fstep-right"><span class="r-fstep-num">8,600</span><span class="r-fstep-pct">40.2%</span></span>
-                </div>
-                <div class="r-fstep-track"><div class="r-fstep-fill" data-w="63%"></div></div>
-              </div>
-
-              <div class="r-funnel-gap"></div>
-
-              <div class="r-fstep">
-                <div class="r-fstep-head">
-                  <span class="r-fstep-lbl">Booking Clicks</span>
-                  <span class="r-fstep-right"><span class="r-fstep-num">1,820</span><span class="r-fstep-pct">8.5%</span></span>
-                </div>
-                <div class="r-fstep-track"><div class="r-fstep-fill" data-w="29%"></div></div>
-              </div>
-
-              <div class="r-funnel-gap"></div>
-
-              <div class="r-fstep r-fstep-final">
-                <div class="r-fstep-head">
-                  <span class="r-fstep-lbl">Clients Visited</span>
-                  <span class="r-fstep-right"><span class="r-fstep-num">284</span><span class="r-fstep-pct r-fstep-pct-win">1.3%</span></span>
-                </div>
-                <div class="r-fstep-track"><div class="r-fstep-fill r-fstep-fill-win" data-w="12%"></div></div>
-              </div>
-
+              <div class="r-sc-val">94</div>
+              <div class="r-sc-lbl">Direction requests</div>
+              <div class="r-sc-note" style="color:#2563EB">From Google Maps</div>
             </div>
-            <div class="r-chain-note">1,820 clicks → 284 clients showed up = <strong>15.6% booking rate</strong></div>
+            <div class="r-sc" style="background:#FFFBEB">
+              <div class="r-sc-top">
+                <div class="r-sc-ico" style="background:#FEF3C7"><svg viewBox="0 0 14 14" fill="none"><rect x="2" y="2" width="10" height="10" rx="2" stroke="#D97706" stroke-width="1.1"/><path d="M5 7h4M5 5h4M5 9h2.5" stroke="#D97706" stroke-width="1" stroke-linecap="round"/></svg></div>
+                <span class="r-sc-badge" style="background:#FEF3C7;color:#B45309">+8%</span>
+              </div>
+              <div class="r-sc-val">486</div>
+              <div class="r-sc-lbl">Website clicks</div>
+              <div class="r-sc-note" style="color:#B45309">From profile</div>
+            </div>
+            <div class="r-sc" style="background:#F5F3FF">
+              <div class="r-sc-top">
+                <div class="r-sc-ico" style="background:var(--brand-10)"><svg viewBox="0 0 14 14" fill="none"><path d="M4 2h6l1 2H3L4 2zM2.5 4.5l1.5 7h6l1.5-7H2.5z" stroke="var(--brand-primary)" stroke-width="1.1" stroke-linejoin="round"/><path d="M5.5 7.5l1 1.5L9 6" stroke="var(--brand-primary)" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                <span class="r-sc-badge" style="background:var(--brand-10);color:var(--brand-primary)">61 calls</span>
+              </div>
+              <div class="r-sc-val">#3</div>
+              <div class="r-sc-lbl">Local keyword rank</div>
+              <div class="r-sc-note" style="color:var(--brand-primary)">"nail salon near me"</div>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- GCI Ecosystem -->
       <div class="r-sec">
-        <div class="r-sh"><span class="r-st">Your GCI Ecosystem</span><span class="r-sl" data-subpage="manage" style="cursor:pointer">Manage ›</span></div>
-        <div class="r-pkg">
-          <div class="r-pkg-ico">
-            <img src="https://www.figma.com/api/mcp/asset/c3b9a21b-46d9-4786-b5dc-6051fb8d8cf1" alt="Go Checkin">
-          </div>
-          <div class="r-pkg-main">
-            <div class="r-pkg-top"><span class="r-pkg-name">Go Check-in</span><span class="r-pkg-badge">Active</span></div>
-            <div class="r-pkg-desc">Processed this month:</div>
-            <div class="r-outcomes">
-              <div class="r-outcome" style="background:#EFF6FF"><div class="r-out-val" style="color:#1D4ED8">284</div><div class="r-out-lbl" style="color:#3B82F6">check-ins</div></div>
-              <div class="r-outcome" style="background:#EFF6FF"><div class="r-out-val" style="color:#1D4ED8">168</div><div class="r-out-lbl" style="color:#3B82F6">return clients</div></div>
-              <div class="r-outcome" style="background:#EFF6FF"><div class="r-out-val" style="color:#1D4ED8">116</div><div class="r-out-lbl" style="color:#3B82F6">new clients</div></div>
+        <div class="r-sh"><span class="r-st">Your GCI Ecosystem</span></div>
+        <div class="r-eco-list">
+          <div class="r-eco-row">
+            <div class="r-pkg-ico"><img src="https://www.figma.com/api/mcp/asset/c3b9a21b-46d9-4786-b5dc-6051fb8d8cf1" alt="Go Checkin"></div>
+            <div class="r-eco-body">
+              <span class="r-eco-name">Go Check-in</span>
+              <span class="r-eco-desc">168 loyal clients kept coming back</span>
+            </div>
+            <div class="r-eco-kpi">
+              <span class="r-eco-val" style="color:#1D4ED8">$7,560</span>
+              <span class="r-eco-vlab">est. return revenue</span>
             </div>
           </div>
-        </div>
-        <div class="r-pkg">
-          <div class="r-pkg-ico" style="position:relative;overflow:hidden">
-            <img style="position:absolute;inset:0;width:100%;height:100%;display:block" src="https://www.figma.com/api/mcp/asset/7a0df439-be47-4299-a208-5a9e12b112a1" alt="">
-            <img style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:17px;height:25px;display:block" src="https://www.figma.com/api/mcp/asset/874e1b3d-e6b4-45e9-b973-3113911a7f47" alt="">
-          </div>
-          <div class="r-pkg-main">
-            <div class="r-pkg-top"><span class="r-pkg-name">Go POS</span><span class="r-pkg-badge">Active</span></div>
-            <div class="r-pkg-desc">Recorded this month:</div>
-            <div class="r-outcomes">
-              <div class="r-outcome" style="background:#F0FDF4"><div class="r-out-val" style="color:#15803D">$52.8K</div><div class="r-out-lbl" style="color:#16A34A">gross revenue</div></div>
-              <div class="r-outcome" style="background:#F0FDF4"><div class="r-out-val" style="color:#15803D">$45.2K</div><div class="r-out-lbl" style="color:#16A34A">net income</div></div>
-              <div class="r-outcome" style="background:#F0FDF4"><div class="r-out-val" style="color:#15803D">284</div><div class="r-out-lbl" style="color:#16A34A">transactions</div></div>
+          <div class="r-eco-row">
+            <div class="r-pkg-ico" style="position:relative;overflow:hidden">
+              <img style="position:absolute;inset:0;width:100%;height:100%;display:block" src="https://www.figma.com/api/mcp/asset/7a0df439-be47-4299-a208-5a9e12b112a1" alt="">
+              <img style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:17px;height:25px;display:block" src="https://www.figma.com/api/mcp/asset/874e1b3d-e6b4-45e9-b973-3113911a7f47" alt="">
+            </div>
+            <div class="r-eco-body">
+              <span class="r-eco-name">Go POS</span>
+              <span class="r-eco-desc">What you actually kept this month</span>
+            </div>
+            <div class="r-eco-kpi">
+              <span class="r-eco-val" style="color:#15803D">$45.2K</span>
+              <span class="r-eco-vlab">net income</span>
             </div>
           </div>
-        </div>
-        <div class="r-pkg">
-          <div class="r-pkg-ico r-pi-teal"><svg viewBox="0 0 22 22" fill="none"><rect x="3.5" y="4.5" width="15" height="13" rx="2.5" stroke="white" stroke-width="1.6"/><path d="M7.5 4.5V3M14.5 4.5V3M3.5 9h15" stroke="white" stroke-width="1.5" stroke-linecap="round"/><path d="M7.5 13h3M12.5 13h2" stroke="white" stroke-width="1.4" stroke-linecap="round"/></svg></div>
-          <div class="r-pkg-main">
-            <div class="r-pkg-top"><span class="r-pkg-name">Go Booking Add-on</span><span class="r-pkg-badge">Active</span></div>
-            <div class="r-pkg-desc">Self-booked online this month:</div>
-            <div class="r-outcomes">
-              <div class="r-outcome" style="background:#F0FDFA"><div class="r-out-val" style="color:#0D9488">208</div><div class="r-out-lbl" style="color:#14B8A6">online bookings</div></div>
-              <div class="r-outcome" style="background:#F0FDFA"><div class="r-out-val" style="color:#0D9488">$43.3K</div><div class="r-out-lbl" style="color:#14B8A6">booking revenue</div></div>
+          <div class="r-eco-row">
+            <div class="r-pkg-ico r-pi-teal"><svg viewBox="0 0 22 22" fill="none"><rect x="3.5" y="4.5" width="15" height="13" rx="2.5" stroke="white" stroke-width="1.6"/><path d="M7.5 4.5V3M14.5 4.5V3M3.5 9h15" stroke="white" stroke-width="1.5" stroke-linecap="round"/><path d="M7.5 13h3M12.5 13h2" stroke="white" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+            <div class="r-eco-body">
+              <span class="r-eco-name">Go Booking</span>
+              <span class="r-eco-desc">208 slots filled while you were offline</span>
+            </div>
+            <div class="r-eco-kpi">
+              <span class="r-eco-val" style="color:#0D9488">$9,360</span>
+              <span class="r-eco-vlab">est. auto-booked revenue</span>
             </div>
           </div>
-        </div>
-        <div class="r-pkg">
-          <div class="r-pkg-ico">
-            <img src="https://www.figma.com/api/mcp/asset/e313ec1f-5fff-4f4c-8351-5886fabefbf0" alt="Bamboo">
-          </div>
-          <div class="r-pkg-main">
-            <div class="r-pkg-top"><span class="r-pkg-name">Bamboo Dot</span><span class="r-pkg-badge">Active</span></div>
-            <div class="r-pkg-desc">Processed this month:</div>
-            <div class="r-outcomes">
-              <div class="r-outcome" style="background:#F8F8F8"><div class="r-out-val" style="color:#374151">$52.8K</div><div class="r-out-lbl" style="color:#6B7280">total payments</div></div>
-              <div class="r-outcome" style="background:#F8F8F8"><div class="r-out-val" style="color:#374151">247</div><div class="r-out-lbl" style="color:#6B7280">card transactions</div></div>
-              <div class="r-outcome" style="background:#F8F8F8"><div class="r-out-val" style="color:#374151">87%</div><div class="r-out-lbl" style="color:#6B7280">card payment rate</div></div>
+          <div class="r-eco-row">
+            <div class="r-pkg-ico"><img src="https://www.figma.com/api/mcp/asset/e313ec1f-5fff-4f4c-8351-5886fabefbf0" alt="Bamboo"></div>
+            <div class="r-eco-body">
+              <span class="r-eco-name">Bamboo Dot</span>
+              <span class="r-eco-desc">vs. standard payment processing</span>
             </div>
-          </div>
-        </div>
-        <div class="r-eco-summary">
-          <div>
-            <div style="font-size:var(--t-s);color:var(--brand-primary);font-weight:600">4 packages active</div>
-            <div style="font-size:var(--t-xs);color:var(--text-field);margin-top:3px">All products connected</div>
-          </div>
-          <div style="text-align:right">
-            <div style="font-size:var(--t-xl);font-weight:700;color:var(--brand-primary)">100%</div>
-            <div style="font-size:var(--t-xs);color:var(--text-field);margin-top:2px">All systems active</div>
+            <div class="r-eco-kpi">
+              <span class="r-eco-val" style="color:#D97706">$1,056</span>
+              <span class="r-eco-vlab">est. fees saved</span>
+            </div>
           </div>
         </div>
       </div>
